@@ -7,9 +7,9 @@ checked in to Git, since it is quite large.  So after checking out
 from Git, you need to run this command once (from the top level csw
 directory):
 
-    sencha -sdk path/to/sdk generate workspace extjs
+    sencha -sdk $path/ext-4.2.1.883 generate workspace csw-extjs
 
-Where /path/to/sdk is the path to the ExtJS SDK that you can download
+Where $path is the path to the ExtJS SDK that you can download
 from the Sencha web site: http://www.sencha.com/products/extjs/download.
 At the time of writing, this version used was ext-4.2.1.883.
 
@@ -36,7 +36,7 @@ The production version is the result of running the command:
 
 in the the application directory. For example.
 
-    cd assembly1
+    cd csw-extjs/assembly1
     sencha app build
 
 This generates an app.js file under build/production that is minified.
