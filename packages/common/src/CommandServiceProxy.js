@@ -15,11 +15,11 @@ Ext.define('common.CommandServiceProxy', {
     },
     reader: {
         type: 'json',
-        root: 'config'
+        root: 'setup'
     },
     writer: {
         type: 'json',
-        root: 'config',
+        root: 'setup',
         writeAllFields: true,  // XXX check this
         nameProperty: 'mapping',
         expandData: true

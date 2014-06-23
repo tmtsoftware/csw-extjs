@@ -112,9 +112,9 @@ Ext.define('Assembly1.controller.Main', {
                     if (result["partiallyDone"]) {
                         var path = result["message"];
                         var partialStatus = result["status"];
-                        if (path == "config.tmt.mobie.blue.filter") {
+                        if (path == 'setup["tmt.mobie.blue.filter"]') {
                             showStatus(filterCb, filterMask, filterDone, result['name']);
-                        } else if (path == "config.tmt.mobie.blue.disperser") {
+                        } else if (path == '["setup.tmt.mobie.blue"].disperser') {
                             showStatus(disperserCb, disperserMask, disperserDone, result['name']);
                         }
                     }
