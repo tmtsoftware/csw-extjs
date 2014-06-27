@@ -14,14 +14,11 @@ proxy: {
                 // doing a submit
                 var filter = scope.raw['filter'];
                 var disperser = scope.raw['disperser'];
-                console.log("XXX doing a submit: filter = " + filter);
                 if (!filter && !disperser) return null; // nothing was changed
             }
 
-            console.log("filter = '" + filter + "'");
-            if (filter === undefined) filter = '';
-            if (disperser === undefined) disperser = '';
-            console.log("filter = '" + filter + "'");
+            if (!filter) filter = '';
+            if (!disperser) disperser = '';
             var obsId = "Obs0001"; // XXX TODO FIXME
             var filterConfig = { "setup": { "obsId": obsId, "tmt.mobie.blue.filter": { "value": filter } } };
             var disperserConfig = { "setup": { "obsId": obsId, "tmt.mobie.blue.disperser": { "value": disperser } } };
@@ -31,11 +28,9 @@ proxy: {
                 // only submit modified parts
                 if (filter) obj.push(filterConfig);
                 if (disperser) obj.push(disperserConfig);
-                console.log("submit ");
             } else {
                 obj.push(filterConfig);
                 obj.push(disperserConfig);
-                console.log("query ");
             }
 
             var json = { 'configs': obj };
