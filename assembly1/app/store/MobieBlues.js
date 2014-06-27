@@ -7,7 +7,12 @@ Ext.define('Assembly1.store.MobieBlues', {
         // TODO: put this in a controller?
         load: function (store, records, success, operations) {
             var form = Ext.getCmp('assembly1Form');
-            form.loadRecord(store.data.first());
+            // XXX Order might be different!?!
+            var m = Ext.create(Ext.ModelManager.getModel('Assembly1.model.MobieBlue'), {
+                filter: records[0].raw.setup['tmt.mobie.blue.filter'].value,
+                disperser: records[1].raw.setup['tmt.mobie.blue.disperser'].value
+            });
+            form.loadRecord(m);
         }
     }
 });
