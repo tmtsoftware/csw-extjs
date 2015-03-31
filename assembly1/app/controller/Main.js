@@ -104,7 +104,7 @@ Ext.define('Assembly1.controller.Main', {
                 method: 'GET',
                 success: function (response, options) {
                     var result = JSON.parse(response.responseText);
-                    var status = result["name"];
+                    var status = result["name"]; // see CommandServiceJsonFormats.scala
                     progressBar.updateText("Status: " + status);
                     console.log("Command status: " + status + ", message = " + result["message"]);
 
