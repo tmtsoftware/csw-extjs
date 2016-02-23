@@ -1,6 +1,8 @@
 ExtJS Web UI Setup
 ==================
 
+*Note: This project is no longer in use. See https://github.com/tmtsoftware/csw-play-demo instead.*
+
 This directory contains an ExtJS workspace.  The generated extjs/ext
 directory, which contains the ExtJS JavaScript sources, has not been
 checked in to Git, since it is quite large.  So after checking out
